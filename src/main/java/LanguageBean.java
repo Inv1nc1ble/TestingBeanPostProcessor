@@ -1,27 +1,26 @@
+import java.util.Enumeration;
+import java.util.ResourceBundle;
+
 public class LanguageBean {
 
-    @LocalizedString(key = "hello")
+    @LocalizedString(key = "greetings")
     private String greetings;
 
-    @LocalizedString(key = "enjoy")
+    @LocalizedString(key = "dinnerWelcoming")
     private String dinnerWelcoming;
 
-    @LocalizedString(key = "cheers")
+    @LocalizedString(key = "toastProposal")
     private String toastProposal;
+
+
 
     private void init(){
         System.out.println("LanguageBean is initializing..........");
+        System.out.println("Dinner Welcoming in Germany = " + dinnerWelcoming);
+        System.out.println("That's how we say Hello in Germany - " + greetings);
+
     }
 
-    public String getGreetings() {
-        return greetings;
-    }
 
-    public String getDinnerWelcoming() {
-        return dinnerWelcoming;
-    }
 
-    public String getToastProposal() {
-        return toastProposal;
-    }
 }
