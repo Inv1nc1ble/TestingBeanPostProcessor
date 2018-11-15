@@ -6,7 +6,14 @@
     <bean id="langBean" class="LanguageBean" init-method="init" />
     <!--<bean class="User" />-->
 
-    <bean class="LanguageBeanPostProcessor" />
+    <bean id="langProc" class="LanguageBeanPostProcessor" />
+
+
+    <bean id="user" class="User">
+        <property name="locale" value="${user.locale}" />
+
+    </bean>
+
 
 
 </beans>

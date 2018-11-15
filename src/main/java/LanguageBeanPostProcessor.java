@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 
 public class LanguageBeanPostProcessor implements BeanPostProcessor {
 
-     User user;
+    User user;
 
     @Nullable
     @Override
@@ -28,7 +28,7 @@ public class LanguageBeanPostProcessor implements BeanPostProcessor {
         LocalizedString ls = field.getAnnotation(LocalizedString.class);
         String key = ls.key();
 
-        ResourceBundle bundle = ResourceBundle.getBundle("lang.LanguageBean", locale);
+        ResourceBundle bundle = ResourceBundle.getBundle("i18n.LanguageBundle", locale);
         String translation = (String) bundle.getObject(key);
         System.out.println(translation);
 
