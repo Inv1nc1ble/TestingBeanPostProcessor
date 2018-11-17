@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 
 public class LanguageBeanPostProcessor implements BeanPostProcessor {
 
-    User user;
+
 
     @Nullable
     @Override
@@ -24,7 +24,7 @@ public class LanguageBeanPostProcessor implements BeanPostProcessor {
     }
 
     private void setTranslatedValue(Object bean, Field field) {
-        Locale locale = new Locale("de", "DE");
+        Locale locale = new Locale("ge", "GE");
         LocalizedString ls = field.getAnnotation(LocalizedString.class);
         String key = ls.key();
 
@@ -51,8 +51,5 @@ public class LanguageBeanPostProcessor implements BeanPostProcessor {
     private boolean fieldHasCorrectType(Field field) {
         return field.getType().equals(String.class);
     }
-
-    Locale locale = Locale.getDefault();
-
 
 }

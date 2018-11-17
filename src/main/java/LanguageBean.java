@@ -1,7 +1,10 @@
 import java.util.Enumeration;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class LanguageBean {
+
+    User user;
 
     @LocalizedString(key = "greetings")
     private String greetings;
