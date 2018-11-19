@@ -7,17 +7,8 @@
     <bean id="languageBean" class="LanguageBean" init-method="init" />
     <!--<bean class="User" />-->
 
-    <bean id="languageBeanPostProcessor" class="LanguageBeanPostProcessor">
+    <bean id="languageBeanPostProcessor" class="LanguageBeanPostProcessor" />
 
-    </bean>
-
-
-
-    <bean id="userBean" class="User">
-
-        <!--<property name="locale" value="${user.locale}" />-->
-
-    </bean>
 
     <!--<context:property-placeholder location="/i18n/LanguageBundle.properties" file-encoding="UTF-8" />-->
     <!--<context:property-placeholder location="/i18n/LanguageBundle_fr.properties" file-encoding="UTF-8" />-->

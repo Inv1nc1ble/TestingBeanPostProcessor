@@ -1,10 +1,6 @@
-import java.util.Enumeration;
 import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class LanguageBean {
-
-    User user;
 
     @LocalizedString(key = "greetings")
     private String greetings;
@@ -15,15 +11,15 @@ public class LanguageBean {
     @LocalizedString(key = "toastProposal")
     private String toastProposal;
 
+    @LocalizedString(key = "greetings")
+    private String greetings2;
 
 
     private void init(){
         System.out.println("LanguageBean is initializing..........");
-        System.out.println("Dinner Welcoming in Germany = " + dinnerWelcoming);
-        System.out.println("That's how we say Hello in Germany - " + greetings);
+        System.out.println("Dinner Welcoming in " + Locale.getDefault().getDisplayLanguage() + " - " + dinnerWelcoming);
+        System.out.println("That's how we say Hello in " + Locale.getDefault().getDisplayLanguage() + " - " + greetings);
+        System.out.printf("Let's say a toast in %s - %s", Locale.getDefault().getDisplayLanguage(), toastProposal);
 
     }
-
-
-
 }

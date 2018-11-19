@@ -8,8 +8,6 @@ import java.util.ResourceBundle;
 
 public class LanguageBeanPostProcessor implements BeanPostProcessor {
 
-
-
     @Nullable
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
@@ -24,13 +22,12 @@ public class LanguageBeanPostProcessor implements BeanPostProcessor {
     }
 
     private void setTranslatedValue(Object bean, Field field) {
-        Locale locale = new Locale("ge", "GE");
         LocalizedString ls = field.getAnnotation(LocalizedString.class);
         String key = ls.key();
 
-        ResourceBundle bundle = ResourceBundle.getBundle("i18n.LanguageBundle", locale);
+        ResourceBundle bundle = ResourceBundle.getBundle("i18n.LanguageBundle", Locale.getDefault());
         String translation = (String) bundle.getObject(key);
-        System.out.println(translation);
+        //System.out.println(translation);
 
         setFieldValue(bean, field, translation);
     }
